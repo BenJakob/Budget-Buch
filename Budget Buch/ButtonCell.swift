@@ -65,3 +65,32 @@ class ExportButtonCell: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+class RemoveAdsButtonCell: UITableViewHeaderFooterView {
+    
+    weak var myTableViewController: ExportController?
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupViews()
+    }
+    
+    let actionButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Remove Ads", for: .normal)
+        button.backgroundColor = .appThemeColor
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    func setupViews() {
+        addSubview(actionButton)
+        actionButton.addTarget(myTableViewController, action: #selector(ExportController.exportData(sender:)), for: .touchUpInside)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[v0]-20-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[v0]-20-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

@@ -6,18 +6,26 @@
 //  Copyright © 2017 Benjamin Jakob. All rights reserved.
 //
 
+//App ID: ca-app-pub-2120545226663778~2616688276
+//Ad unit ID: ca-app-pub-2120545226663778/1305328806
+
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-2120545226663778~2616688276")
+        PurchaseManager.instance.fetchProducts()
         
         self.window!.rootViewController = MainController()
         self.window!.makeKeyAndVisible()

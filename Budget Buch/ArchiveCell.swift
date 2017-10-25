@@ -15,8 +15,6 @@ class ArchiveCell: UITableViewCell {
         setupViews()
     }
     
-    
-    
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 17)

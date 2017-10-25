@@ -11,8 +11,9 @@ import CoreData
 
 class ExportController: UITableViewController {
     
-    var headerData = [" "]
+//    var headerData = [" "]
     let exportCellId = "exportCellId"
+    let removeAdsCellId = "removeAdsCellId"
     let categories = ["Trinkgeld", "Sonstige Einnahme", "Gesundheit" , "Geschenke", "Kleidung", "Kneipe", "Lebensmittel", "Restaurant", "Transport", "Wohnung", "Sonstige Ausgabe"]
     var categorySums = [Double]()
     var entries = [Entry]()
@@ -26,8 +27,9 @@ class ExportController: UITableViewController {
         }
         tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
         tableView.register(ExportButtonCell.self, forHeaderFooterViewReuseIdentifier: exportCellId)
+        tableView.register(RemoveAdsButtonCell.self, forHeaderFooterViewReuseIdentifier: removeAdsCellId)
         tableView.register(StandardCell.self, forCellReuseIdentifier: "cellId")
-        
+        tableView.register(AddCell.self, forCellReuseIdentifier: "addCell")
         for _ in categories {
             categorySums.append(0.0)
         }
@@ -37,13 +39,20 @@ class ExportController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return headerData.count
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: exportCellId) as! ExportButtonCell
-        cell.myTableViewController = self
-        return cell
+        if section == 0 {
+            let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: exportCellId) as! ExportButtonCell
+            cell.myTableViewController = self
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: removeAdsCellId) as! RemoveAdsButtonCell
+            cell.myTableViewController = self
+            return cell
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +60,10 @@ class ExportController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        if indexPath.section == 0 {
+            return 44
+        }
+        return 250
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -59,13 +71,19 @@ class ExportController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! StandardCell
-        cell.selectionStyle = .none
-        cell.nameLabel.text = "Monat"
-        cell.textField.clearButtonMode = .never
-        cell.textField.tintColor = .clear
-        datePicker = CustomDatePicker(textField: cell.textField, months: getMonths(), years: getYears())
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! StandardCell
+            cell.selectionStyle = .none
+            cell.nameLabel.text = "Monat"
+            cell.textField.clearButtonMode = .never
+            cell.textField.tintColor = .clear
+            datePicker = CustomDatePicker(textField: cell.textField, months: getMonths(), years: getYears())
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addCell", for: indexPath) as! AddCell
+            cell.adView.rootViewController = self
+            return cell
+        }
     }
     
     private func loadEntries() {

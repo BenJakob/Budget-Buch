@@ -16,6 +16,10 @@
 		9079E8DD1F9F71BF00AE6E40 /* RepeatingExpense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079E8D91F9F71BF00AE6E40 /* RepeatingExpense+CoreDataProperties.swift */; };
 		9079E8DE1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079E8DA1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataClass.swift */; };
 		9079E8DF1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079E8DB1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataProperties.swift */; };
+		90849D7E1FA1262F003F48D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90849D7D1FA1262F003F48D5 /* StoreKit.framework */; };
+		90849D821FA127EC003F48D5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90849D811FA127EC003F48D5 /* GoogleMobileAds.framework */; };
+		90849D841FA12E90003F48D5 /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90849D831FA12E90003F48D5 /* AddCell.swift */; };
+		90849D861FA13423003F48D5 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90849D851FA13423003F48D5 /* PurchaseManager.swift */; };
 		9087D2341FA062F1007EE8C0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D2331FA062F1007EE8C0 /* DataService.swift */; };
 		909EAF481F9B5F8900336908 /* Haushaltsbuch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 909EAF461F9B5F8900336908 /* Haushaltsbuch.xcdatamodeld */; };
 		909EAF5C1F9B611800336908 /* IncomeEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EAF561F9B611800336908 /* IncomeEntry+CoreDataClass.swift */; };
@@ -46,6 +50,10 @@
 		9079E8D91F9F71BF00AE6E40 /* RepeatingExpense+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepeatingExpense+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9079E8DA1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepeatingIncome+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9079E8DB1F9F71BF00AE6E40 /* RepeatingIncome+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepeatingIncome+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90849D7D1FA1262F003F48D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		90849D811FA127EC003F48D5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		90849D831FA12E90003F48D5 /* AddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
+		90849D851FA13423003F48D5 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		9087D2331FA062F1007EE8C0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		909EAF471F9B5F8900336908 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		909EAF561F9B611800336908 /* IncomeEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IncomeEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -73,16 +81,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90849D821FA127EC003F48D5 /* GoogleMobileAds.framework in Frameworks */,
+				90849D7E1FA1262F003F48D5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90849D7C1FA1262F003F48D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90849D811FA127EC003F48D5 /* GoogleMobileAds.framework */,
+				90849D7D1FA1262F003F48D5 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9087D2321FA062D1007EE8C0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				9087D2331FA062F1007EE8C0 /* DataService.swift */,
+				90849D851FA13423003F48D5 /* PurchaseManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -111,6 +131,7 @@
 			children = (
 				90A4AE521F321F4700D09468 /* Budget Buch */,
 				90A4AE511F321F4700D09468 /* Products */,
+				90849D7C1FA1262F003F48D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +187,7 @@
 				90E942101F9C0367002BC74B /* DatePicker.swift */,
 				90A4AE681F322EC900D09468 /* CategoryPicker.swift */,
 				9052858C1F9BB604006CD9AB /* CustomDatePicker.swift */,
+				90849D831FA12E90003F48D5 /* AddCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -204,7 +226,12 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 3QQS6LJZYR;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -253,10 +280,12 @@
 				9011211F1F3263A9000C8EE2 /* ExportController.swift in Sources */,
 				909EAF5F1F9B611800336908 /* ExpenseEntry+CoreDataProperties.swift in Sources */,
 				905285891F9B8008006CD9AB /* ArchiveCell.swift in Sources */,
+				90849D861FA13423003F48D5 /* PurchaseManager.swift in Sources */,
 				90A4AE561F321F4700D09468 /* MainController.swift in Sources */,
 				909EAF631F9B638700336908 /* ArchiveController.swift in Sources */,
 				9079E8DD1F9F71BF00AE6E40 /* RepeatingExpense+CoreDataProperties.swift in Sources */,
 				90A4AE691F322EC900D09468 /* CategoryPicker.swift in Sources */,
+				90849D841FA12E90003F48D5 /* AddCell.swift in Sources */,
 				909EAF611F9B611800336908 /* Entry+CoreDataProperties.swift in Sources */,
 				9052858B1F9B8045006CD9AB /* ButtonCell.swift in Sources */,
 				909EAF481F9B5F8900336908 /* Haushaltsbuch.xcdatamodeld in Sources */,
@@ -396,17 +425,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3QQS6LJZYR;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Budget Buch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.fenox.Haushaltsbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "49c81f94-32d4-43ea-be87-b55f690d4823";
+				PROVISIONING_PROFILE_SPECIFIER = Haushaltsbuch;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 			};
 			name = Debug;
 		};
@@ -414,17 +453,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3QQS6LJZYR;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Budget Buch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.fenox.Haushaltsbuch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "49c81f94-32d4-43ea-be87-b55f690d4823";
+				PROVISIONING_PROFILE_SPECIFIER = Haushaltsbuch;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 			};
 			name = Release;
 		};
