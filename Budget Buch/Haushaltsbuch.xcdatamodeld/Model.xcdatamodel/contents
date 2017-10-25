@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entry" representedClassName="Entry" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="ExpenseEntry" representedClassName="ExpenseEntry" parentEntity="Entry" syncable="YES"/>
+    <entity name="IncomeEntry" representedClassName="IncomeEntry" parentEntity="Entry" syncable="YES"/>
+    <entity name="RepeatingExpense" representedClassName="RepeatingExpense" parentEntity="Entry" syncable="YES">
+        <attribute name="periode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RepeatingIncome" representedClassName="RepeatingIncome" parentEntity="Entry" syncable="YES">
+        <attribute name="periode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entry" positionX="-99" positionY="-18" width="128" height="88"/>
+        <element name="ExpenseEntry" positionX="-0" positionY="162" width="128" height="45"/>
+        <element name="IncomeEntry" positionX="-198" positionY="162" width="128" height="45"/>
+        <element name="RepeatingExpense" positionX="-0" positionY="291" width="128" height="58"/>
+        <element name="RepeatingIncome" positionX="-198" positionY="291" width="128" height="58"/>
+    </elements>
+</model>
