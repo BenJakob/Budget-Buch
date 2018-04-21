@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName="Category" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="colorIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iconIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entry" inverseName="category" inverseEntity="Entry" syncable="YES"/>
+    </entity>
+    <entity name="Entry" representedClassName="Entry" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="entry" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Expense" representedClassName="Expense" parentEntity="Entry" syncable="YES" codeGenerationType="class">
+        <attribute name="isRepeating" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ExpenseCategory" representedClassName="ExpenseCategory" parentEntity="Category" syncable="YES" codeGenerationType="class"/>
+    <entity name="Income" representedClassName="Income" parentEntity="Entry" syncable="YES" codeGenerationType="class">
+        <attribute name="isRepeating" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="IncomeCategory" representedClassName="IncomeCategory" parentEntity="Category" syncable="YES" codeGenerationType="class"/>
+    <entity name="OtherExpense" representedClassName="OtherExpense" parentEntity="ExpenseCategory" syncable="YES" codeGenerationType="class"/>
+    <entity name="OtherIncome" representedClassName="OtherIncome" parentEntity="IncomeCategory" syncable="YES" codeGenerationType="class"/>
+    <entity name="RepeatingEntry" representedClassName="RepeatingEntry" parentEntity="Entry" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="interval" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="RepeatingExpense" representedClassName="RepeatingExpense" parentEntity="RepeatingEntry" syncable="YES" codeGenerationType="class"/>
+    <entity name="RepeatingIncome" representedClassName="RepeatingIncome" parentEntity="RepeatingEntry" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="Category" positionX="387" positionY="5" width="128" height="103"/>
+        <element name="Entry" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Expense" positionX="-18" positionY="135" width="128" height="58"/>
+        <element name="ExpenseCategory" positionX="324" positionY="245" width="128" height="43"/>
+        <element name="Income" positionX="117" positionY="135" width="128" height="58"/>
+        <element name="IncomeCategory" positionX="493" positionY="245" width="128" height="43"/>
+        <element name="OtherExpense" positionX="324" positionY="324" width="128" height="43"/>
+        <element name="OtherIncome" positionX="495" positionY="324" width="128" height="43"/>
+        <element name="RepeatingEntry" positionX="-272" positionY="126" width="128" height="75"/>
+        <element name="RepeatingExpense" positionX="-369" positionY="243" width="128" height="43"/>
+        <element name="RepeatingIncome" positionX="-207" positionY="243" width="128" height="43"/>
+    </elements>
+</model>
