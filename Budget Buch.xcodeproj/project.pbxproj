@@ -85,6 +85,7 @@
 		902F16991FA7A51700C3944F /* BalanceDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDetailCell.swift; sourceTree = "<group>"; };
 		90397D831FAF230700A159AE /* RepeatingIncomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingIncomeVC.swift; sourceTree = "<group>"; };
 		9039E94D1FA5FE6400C7BD59 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		903E551420D13889003C5E53 /* Budget Buch-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget Buch-Bridging-Header.h"; sourceTree = "<group>"; };
 		904AB20A1FA4C702000A7517 /* DiagramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramCell.swift; sourceTree = "<group>"; };
 		9069CB391FA526D500C35777 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		906C0CA01FAA439A00D4F4BF /* IconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		90849E061FA1DEBE003F48D5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		90849E081FA1DF6B003F48D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90B458461FA9C49000AB1B9B /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
-		90B85EC920AB62A6001A8B2C /* Budget Buch-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget Buch-Bridging-Header.h"; sourceTree = "<group>"; };
 		90B85ED020AB66EA001A8B2C /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BAC08F1FAB823A004E1836 /* DelegateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateVC.swift; sourceTree = "<group>"; };
 		90BAC0911FAB865C004E1836 /* ConfigureStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureStatisticsVC.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		90849DF61FA1D250003F48D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				90B85EC920AB62A6001A8B2C /* Budget Buch-Bridging-Header.h */,
+				903E551420D13889003C5E53 /* Budget Buch-Bridging-Header.h */,
 				90849DE11FA1D245003F48D5 /* AppDelegate.swift */,
 				90849E061FA1DEBE003F48D5 /* Extensions.swift */,
 				902799D71FA2757100DCDF66 /* ARPieChart.swift */,
