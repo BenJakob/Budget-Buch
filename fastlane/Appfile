@@ -1,0 +1,8 @@
+app_identifier("com.fenox.Budget-Buch") # The bundle identifier of your app
+apple_id("benjamin.jakob@fenox-software.de") # Your Apple email address
+
+itc_team_id("118811313") # iTunes Connect Team ID
+team_id("3QQS6LJZYR") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

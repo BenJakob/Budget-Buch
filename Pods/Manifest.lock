@@ -1,0 +1,16 @@
+PODS:
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - SWRevealViewController (~> 2.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SWRevealViewController
+
+SPEC CHECKSUMS:
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+PODFILE CHECKSUM: 34888e7b07ff131c745598b052d25e7aa37bd56e
+
+COCOAPODS: 1.5.2
